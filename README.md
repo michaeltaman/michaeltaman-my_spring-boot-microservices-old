@@ -38,8 +38,27 @@ with version 3.0.5 of <dependency> and
 ```
 with version 2.6.6 respectively
 
-The above reasons determined the use of a separate pair of databases, mysql order-service-old 
-and inventory-service-old. This was done in order to ensure that the Zipkin distributed tracing 
-system would work, see bellow:
+The above reasons determined the use of a separate pair of databases, mysql order-service-old
+and inventory-service-old. This was done in order to ensure that the Zipkin distributed tracing
+system would work.
 
-![Zipkin Image](./images/zipkin_1.PNG)
+Zipkin run's in docker:
+```hash
+    docker run -d -p 9411:9411 openzipkin/zipkin
+```
+
+Java
+If you have Java 17 or higher installed, the quickest way to get started is to fetch the latest release as a self-contained executable jar:
+
+```hash
+    curl -sSL https://zipkin.io/quickstart.sh | bash -s
+    java -jar zipkin.jar
+```
+
+![Zipkin_5 Image](./images/zipkin_5.PNG)
+
+![Zipkin_4 Image](./images/zipkin_4.PNG)
+
+![Zipkin_1 Image](./images/zipkin_1.PNG)
+
+![Zipkin_3 Image](./images/zipkin_3.PNG)
